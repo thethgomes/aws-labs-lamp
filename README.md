@@ -1,8 +1,7 @@
 # aws-labs-vpc
 ### OBJECTIVE
 
-Creating an  AWS VPC with Public and Private Subnets. Configuring Route Tables, attaching a NAT Gateway to the Private Subnet , running EC2 Web Server instance on Public Subnet and Private Instance on Private Subnet accessed by a Bastion HOST.
-
+Creating an  AWS VPC with Public and Private Subnets. Configuring Route Tables, attaching a NAT Gateway to the Private Subnet.
 
 ####  1 - Creating a VPC and Subnets
 Access AWS Console  https://console.aws.amazon.com after logged in, click on Services menu and select Networking & Content Delivery then click on VPC.
@@ -138,82 +137,7 @@ Click on Route Tables and select _rt-private_ Route Table then Click on Routes >
 ![image](https://user-images.githubusercontent.com/48591555/153715528-02123759-2ac6-4869-9fb5-389f4a2622ab.png)
 
 
-#### 5 - Creating EC2 Instances - WebServer/Bastion Host/ Private Instances
 
-**1.Creating Web Server in a Public Subnet**
-To create a EC2 Web Server instance click Search bar in AWS console and type "EC2" then click on EC2.
-on left panel find Instances menu then selec Instances and start creating a new instance clicking on **Launch instances** button.
-Select first option for _Amazon Linux 2 AMI_ instance:
-
-![image](https://user-images.githubusercontent.com/48591555/153715787-d2070156-1872-4073-9526-c4cb4c141a3e.png)
-
-Select: _t2.micro_ for Instance Type then click on "**Next"Configure Instance details**":
-
-![image](https://user-images.githubusercontent.com/48591555/153715850-2dfad674-579b-4527-bf3a-34c7bc2aadb2.png)
-
-Set following options for Network 
-
-**Network** : **vpc-prod1**
-**Subnet** : **Public-A**
-
-![image](https://user-images.githubusercontent.com/48591555/153716157-3a778a89-9650-486f-b27f-a19df49774e4.png)
-
-
-Add following **"User data**"to build up an apache web server: 
-
-```markdown
-#!/bin/bash
-# install httpd
-yum update -y
-yum install -y httpd
-systemctl start httpd
-systemctl enable httpd
-echo "<h1>Web Server PROD-01</h1>" > /var/www/html/index.html
-```
-![image](https://user-images.githubusercontent.com/48591555/153716296-1a23b65d-eb00-4a36-9aa3-e9343f358c29.png)
-
-Click on **Next Add Storage**, there is no need to change then click on **Next Add Tags"**
-Click on **Add Tag** and add following Tags:
-
-![image](https://user-images.githubusercontent.com/48591555/153716530-a0d10c28-71fc-4659-9703-685bf864c4f6.png)
-
-Create Following Security Group for the Web-Server
-![image](https://user-images.githubusercontent.com/48591555/153716542-79cd120c-a357-4dac-9e87-b70c07f88bda.png)
-
-Create a New-key pair for web-server.
-
-**2.Creating Bastion Host in a Public Subnet**
-To create a EC2 Bastion Host instance click Search bar in AWS console and type "EC2" then click on EC2.
-on left panel find Instances menu then selec Instances and start creating a new instance clicking on **Launch instances** button.
-Select first option for _Amazon Linux 2 AMI_ instance:
-
-![image](https://user-images.githubusercontent.com/48591555/153715787-d2070156-1872-4073-9526-c4cb4c141a3e.png)
-
-Select: _t2.micro_ for Instance Type then click on "**Next"Configure Instance details**":
-
-![image](https://user-images.githubusercontent.com/48591555/153715850-2dfad674-579b-4527-bf3a-34c7bc2aadb2.png)
-
-Set following options for Network 
-
-**Network** : **vpc-prod1**
-**Subnet** : **Public-A**
-
-![image](https://user-images.githubusercontent.com/48591555/153716157-3a778a89-9650-486f-b27f-a19df49774e4.png)
-
-Click on **Next Add Storage**, there is no need to change then click on **Next Add Tags"**
-Click on **Add Tag** and add following Tags:
-
-![image](https://user-images.githubusercontent.com/48591555/153716750-6a631181-bf4a-4e0b-b7f2-1df03bd3efdc.png)
-
-Create following group for Bastion Host:
-![image](https://user-images.githubusercontent.com/48591555/153716817-89a0d02a-9e27-4991-b3b7-b6e2edd4a636.png)
-
-Select same key pair and launch instance
-
-![image](https://user-images.githubusercontent.com/48591555/153716871-e8b15110-0060-4dbb-84ae-8839f5ff2341.png)
-
-
-**3.Creating Private Instance and acessing from Bastion Host SSH connection.**
 
 
 
