@@ -1,7 +1,7 @@
 # aws-labs-vpc
 ### OBJECTIVE
 
-Creating an  AWS VPC with Public and Private Subnets. Configuring Route Tables, attaching a NAT Gateway to the Private Subnet.
+Creating an AWS VPC with Public and Private Subnets. Configuring Route Tables, attaching a NAT Gateway to the Private Subnet.
 
 ####  1 - Creating a VPC and Subnets
 Access AWS Console  https://console.aws.amazon.com after logged in, click on Services menu and select Networking & Content Delivery then click on VPC.
