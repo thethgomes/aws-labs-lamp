@@ -1,4 +1,6 @@
-## Welcome to GitHub Pages
+## AWS-LABS-APACHE-HA
+### OBJECTIVE
+Build up EC2 instances running apache server in Multiple Availability Zones with ELB (elastic Load Balancer
 
 You can use the [editor on GitHub](https://github.com/thethgomes/aws-labs-lamp/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
