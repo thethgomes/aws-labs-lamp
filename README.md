@@ -1,5 +1,4 @@
-# aws-labs-lamp
-OBJECTIVE: 
-Running LAMP in AWS Infrastrucutre with High Availability
+# aws-labs-vpc
+Building VPC with Public and Private Subnets
 
 
