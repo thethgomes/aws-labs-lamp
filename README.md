@@ -1,2 +1,2 @@
-# aws-labs
-Running LABS in AWS Infrastructure
+# aws-labs-lamp
+Running LAMP in AWS Infrastrucutre with High Availability
