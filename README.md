@@ -134,7 +134,8 @@ finish clicking on "** Create NAT Gateway**" button.
 Now to enable Private Subnet traffing route to internet trhough NAT Gateway, you may need to add this traffic route to Private Subnet.
 Click on Route Tables and select _rt-private_ Route Table then Click on Routes > Edit Routes. Add following Route entry:
 
-![image](https://user-images.githubusercontent.com/48591555/153715528-02123759-2ac6-4869-9fb5-389f4a2622ab.png)
+![image](https://user-images.githubusercontent.com/48591555/153727293-462ac0a9-f212-4720-bda1-24bbfe8348a8.png)
+
 
 
 
