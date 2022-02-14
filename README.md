@@ -1,7 +1,10 @@
 # aws-labs-vpc
+  <img align="center" alt="Thiago-AWS" height="60" width="60" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg">
+
 ### OBJECTIVE
 
 Creating an AWS VPC with Public and Private Subnets. Configuring Route Tables, attaching a NAT Gateway to the Private Subnet.
+##
 
 ####  1 - Creating a VPC and Subnets
 Access AWS Console  https://console.aws.amazon.com after logged in, click on Services menu and select Networking & Content Delivery then click on VPC.
@@ -72,6 +75,7 @@ _Select your VPC (in this example is the vpc-prod1), giving a name to your Priva
 
 ![image](https://user-images.githubusercontent.com/48591555/153714583-e9d577e1-55e7-4722-9cf7-78a7187bee26.png)
 
+##
 
 #### 2 - Creating Internet Gateway
 To Create an internet Gateway click on Internet Gateways menu then click on Create Internet Gateway button and name your internet gateway. For this LAB internet gateway name is ig-prod-01:
@@ -84,6 +88,7 @@ As soon as Internet Gateway has been created, Attach it to _vpc-prod1_:
 
 ![image](https://user-images.githubusercontent.com/48591555/153714808-debfca98-427c-40d4-a66f-51607586fb79.png)
 
+##
 #### 3 - Creating Route Tables
  - **Public Route Table**
  Click on "_Route Tables_" menu then click on **Create route table** button and Fill following information:
@@ -116,6 +121,7 @@ Click on Subnet Associations then click on "**Edit Subnet associations**" to add
 
 ![image](https://user-images.githubusercontent.com/48591555/153715164-7fd0a983-387b-408b-b0d7-5cd8db50a8f1.png)
 
+##
 #### 4 - Creating NAT Gateway
 NAT Gateway is a highly available AWS managed service that makes it easy to connect to the Internet from instances within a private subnet in an Amazon Virtual Private Cloud.
 To launch a  NAT Gateway, click on **NAT Gateways** in the **VIRTUAL PRIVATE CLOUD** menu then click on **Create NAT gateway** button filling those information:
